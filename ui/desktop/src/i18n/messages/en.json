@@ -3053,6 +3053,12 @@
   "recipeModelSelector.useDefaultProvider": {
     "defaultMessage": "Use default provider"
   },
+  "recipeNameField.defaultLabel": {
+    "defaultMessage": "Recipe Name"
+  },
+  "recipeNameField.formatHint": {
+    "defaultMessage": "Will be automatically formatted (lowercase, dashes for spaces)"
+  },
   "recipeWarningModal.cancel": {
     "defaultMessage": "Cancel"
   },
@@ -3758,6 +3764,27 @@
   "sessionIndicators.streaming": {
     "defaultMessage": "Streaming"
   },
+  "sessionViewComponents.empty.description": {
+    "defaultMessage": "This session doesn't contain any messages"
+  },
+  "sessionViewComponents.empty.title": {
+    "defaultMessage": "No messages found"
+  },
+  "sessionViewComponents.error.loading": {
+    "defaultMessage": "Error Loading Session Details"
+  },
+  "sessionViewComponents.error.tryAgain": {
+    "defaultMessage": "Try Again"
+  },
+  "sessionViewComponents.role.assistant": {
+    "defaultMessage": "Goose"
+  },
+  "sessionViewComponents.role.user": {
+    "defaultMessage": "You"
+  },
+  "sessions.action.archive": {
+    "defaultMessage": "Archive session"
+  },
   "sessions.action.delete": {
     "defaultMessage": "Delete session"
   },
@@ -3859,6 +3886,12 @@
   },
   "sessions.shareNostr.title": {
     "defaultMessage": "Encrypted Nostr Share Link"
+  },
+  "sessions.toast.archiveFailed": {
+    "defaultMessage": "Failed to archive session \"{name}\": {error}"
+  },
+  "sessions.toast.archived": {
+    "defaultMessage": "Session \"{name}\" archived"
   },
   "sessions.toast.copied": {
     "defaultMessage": "Copied to clipboard"
@@ -4094,6 +4127,9 @@
   "settingsView.title": {
     "defaultMessage": "Settings"
   },
+  "sheet.close": {
+    "defaultMessage": "Close"
+  },
   "shortcutRecorder.cancel": {
     "defaultMessage": "Cancel"
   },
@@ -4159,6 +4195,15 @@
   },
   "stringUtils.configuredProvider": {
     "defaultMessage": "{name} provider is configured"
+  },
+  "stringUtils.ollamaApp": {
+    "defaultMessage": "Ollama app"
+  },
+  "stringUtils.ollamaNotConfiguredPrefix": {
+    "defaultMessage": "To use, either the"
+  },
+  "stringUtils.ollamaNotConfiguredSuffix": {
+    "defaultMessage": "must be installed on your machine and open, or you must enter a value for OLLAMA_HOST."
   },
   "subRecipeEditor.addExisting": {
     "defaultMessage": "Add Existing"
