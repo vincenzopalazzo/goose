@@ -123,7 +123,7 @@ impl OpenAiCompatibleProvider {
                 // Pull the first body chunk inside the retry scope: a stream cut
                 // before any bytes arrive is a failed request, not a partial reply.
                 let first_chunk = if supports_streaming {
-                    first_body_chunk(&mut response).await?
+                    Some(first_body_chunk(&mut response).await?)
                 } else {
                     None
                 };
@@ -248,12 +248,17 @@ pub use super::http_status::handle_response as handle_response_openai_compat;
 /// A `200 OK` whose connection dies before delivering any body bytes only
 /// fails here, while the caller is still inside its `with_retry` scope —
 /// afterwards the failure would surface as a mid-stream item error where
-/// retry is unreachable.
-pub async fn first_body_chunk(response: &mut Response) -> Result<Option<Bytes>, ProviderError> {
+/// retry is unreachable. A clean EOF is also an error: an empty body is
+/// never a valid answer to a streaming request, and `Ok(None)` here would
+/// otherwise complete the retry scope with a stream that yields nothing.
+pub async fn first_body_chunk(response: &mut Response) -> Result<Bytes, ProviderError> {
     response
         .chunk()
         .await
-        .map_err(ProviderError::stream_decode_error)
+        .map_err(ProviderError::stream_decode_error)?
+        .ok_or_else(|| {
+            ProviderError::stream_decode_error("stream ended before the first body chunk")
+        })
 }
 
 fn body_stream_with_prefix(
