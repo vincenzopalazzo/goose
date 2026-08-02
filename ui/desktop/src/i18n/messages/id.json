@@ -3455,6 +3455,9 @@
   "scheduleModal.editSchedule": {
     "defaultMessage": "Edit Jadwal"
   },
+  "scheduleModal.failedLoadRecipes": {
+    "defaultMessage": "Gagal memuat resep."
+  },
   "scheduleModal.failedParseRecipe": {
     "defaultMessage": "Gagal mengurai resep dari berkas."
   },
@@ -3467,11 +3470,17 @@
   "scheduleModal.invalidFileType": {
     "defaultMessage": "Jenis berkas tidak valid: Harap pilih berkas YAML (.yaml atau .yml)"
   },
+  "scheduleModal.loadingRecipes": {
+    "defaultMessage": "Memuat resep..."
+  },
   "scheduleModal.nameLabel": {
     "defaultMessage": "Nama:"
   },
   "scheduleModal.namePlaceholder": {
     "defaultMessage": "mis., daily-summary-job"
+  },
+  "scheduleModal.noSavedRecipes": {
+    "defaultMessage": "Tidak ada resep tersimpan ditemukan."
   },
   "scheduleModal.provideValidRecipe": {
     "defaultMessage": "Harap berikan sumber resep yang valid."
@@ -3485,11 +3494,17 @@
   "scheduleModal.recipeTitle": {
     "defaultMessage": "Judul: {title}"
   },
+  "scheduleModal.savedRecipes": {
+    "defaultMessage": "Resep tersimpan"
+  },
   "scheduleModal.scheduleIdRequired": {
     "defaultMessage": "ID jadwal diperlukan."
   },
   "scheduleModal.scheduleLabel": {
     "defaultMessage": "Jadwal:"
+  },
+  "scheduleModal.selectRecipePlaceholder": {
+    "defaultMessage": "Pilih resep tersimpan"
   },
   "scheduleModal.selected": {
     "defaultMessage": "Dipilih: {path}"
