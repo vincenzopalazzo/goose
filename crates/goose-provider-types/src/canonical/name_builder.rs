@@ -53,6 +53,7 @@ pub fn map_provider_name(provider: &str) -> &str {
         "zhipu" => "zhipuai",
         "novita" => "novita-ai",
         "opencode_go" => "opencode-go",
+        "opencode_zen" => "opencode",
         "ollama_cloud" => "ollama-cloud",
         _ => provider,
     }
@@ -343,6 +344,10 @@ mod tests {
         assert_eq!(
             map_to_canonical_model("opencode_go", "kimi-k2.6", r),
             Some("opencode-go/kimi-k2.6".to_string())
+        );
+        assert_eq!(
+            map_to_canonical_model("opencode_zen", "kimi-k3", r),
+            Some("opencode/kimi-k3".to_string())
         );
 
         // === OpenRouter ===
